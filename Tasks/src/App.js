@@ -3,6 +3,9 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import LoginForm from "./Component/LoginForm";
 import FocusInput from "./Component/FocusInput";
+import RenderPropsComponent from "./Component/RenderPropsComponent";
+import Users from "./Component/Users";
+import Post from "./Component/Post";
 
 class App extends React.Component {
   constructor(props) {
@@ -33,8 +36,14 @@ class App extends React.Component {
 
         {currentPage}
         <hr></hr>
-        <FocusInput/>
-        {/* <Home/> */}
+        <FocusInput />
+        <RenderPropsComponent render={() => <h3> I am coming from render props </h3>} />
+        <h1>Users List</h1>
+        <Users />
+        <div>
+          <h1>Create Post</h1>
+          <Post/>
+        </div>
       </div>
     );
   }
