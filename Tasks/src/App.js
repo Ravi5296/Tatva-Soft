@@ -7,6 +7,9 @@ import RenderPropsComponent from "./Component/RenderPropsComponent";
 import Users from "./Component/Users";
 import Post from "./Component/Post";
 import CounterHook from "./Component/CounterHook";
+import PostDetails from "./Component/PostDetails";
+import CompA from "./Component/Contex/CompA";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -37,15 +40,17 @@ class App extends React.Component {
 
         {currentPage}
         <hr></hr>
-        <FocusInput />
-        <RenderPropsComponent render={() => <h3> I am coming from render props </h3>} />
-        <h1>Users List</h1>
-        <Users />
-        <div>
-          <h1>Create Post</h1>
-          <Post/>
-        </div>
-        <CounterHook/>
+        {/* <FocusInput /> */}
+        {/* <RenderPropsComponent render={() => <h3> I am coming from render props </h3>} /> */}
+        {/* <h1>Users List</h1> */}
+        {/* <Users /> */}
+        {/* <div> */}
+          {/* <h1>Create Post</h1> */}
+          {/* <Post /> */}
+        {/* </div> */}
+        {/* <CounterHook /> */}
+        {/* <PostDetails/> */}
+        <CompA/>
       </div>
     );
   }
