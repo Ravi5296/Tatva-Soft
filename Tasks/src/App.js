@@ -6,6 +6,7 @@ import FocusInput from "./Component/FocusInput";
 import RenderPropsComponent from "./Component/RenderPropsComponent";
 import Users from "./Component/Users";
 import Post from "./Component/Post";
+import CounterHook from "./Component/CounterHook";
 
 class App extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class App extends React.Component {
           <h1>Create Post</h1>
           <Post/>
         </div>
+        <CounterHook/>
       </div>
     );
   }
