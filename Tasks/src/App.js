@@ -22,6 +22,7 @@ import FocusInputHook from "./Component/UseRefHook/FocusInputHook";
 import DocTitle from "./Component/CustomHooks/DocTitle";
 import DocTitle2 from "./Component/CustomHooks/DocTitle2";
 import MyForm from "./Component/MyForm";
+import Calculator from "./Component/Day-21Cal";
 
 export const CountContext = React.createContext()
 
@@ -75,7 +76,8 @@ class App extends React.Component {
         {/* <FocusInputHook/> */}
         {/* <DocTitle/> */}
         {/* <DocTitle2/> */}
-        <MyForm/>
+        {/* <MyForm/> */}
+        <Calculator/>
       </div>
     );
   }
