@@ -9,6 +9,7 @@ import Post from "./Component/Post";
 import CounterHook from "./Component/CounterHook";
 import PostDetails from "./Component/PostDetails";
 import CompA from "./Component/Contex/CompA";
+import Counter from "./Component/UseReducer/Counter";
 
 
 class App extends React.Component {
@@ -50,7 +51,8 @@ class App extends React.Component {
         {/* </div> */}
         {/* <CounterHook /> */}
         {/* <PostDetails/> */}
-        <CompA/>
+        {/* <CompA/> */}
+        <Counter/>
       </div>
     );
   }
