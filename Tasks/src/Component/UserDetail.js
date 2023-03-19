@@ -11,4 +11,4 @@ function UserDetail(props) {
   );
 }
 
-export default UserDetail;
+export default React.memo(UserDetail);
