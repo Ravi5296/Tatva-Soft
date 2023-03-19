@@ -18,6 +18,10 @@ import FetctDataWithReducer from "./Component/UseReducer/FetctDataWithReducer";
 import RegisterUser from "./Component/RegisterUser";
 import PatentComp from "./Component/PerformanceOptimizationHooks/CallBackHook/PatentComp";
 import CounterMemo from "./Component/PerformanceOptimizationHooks/UseMemo/CounterMemo";
+import FocusInputHook from "./Component/UseRefHook/FocusInputHook";
+import DocTitle from "./Component/CustomHooks/DocTitle";
+import DocTitle2 from "./Component/CustomHooks/DocTitle2";
+import MyForm from "./Component/MyForm";
 
 export const CountContext = React.createContext()
 
@@ -67,7 +71,11 @@ class App extends React.Component {
         {/* <FetctDataWithReducer/> */}
         {/* <RegisterUser/> */}
         {/* <PatentComp/> */}
-        <CounterMemo/>
+        {/* <CounterMemo/> */}
+        {/* <FocusInputHook/> */}
+        {/* <DocTitle/> */}
+        {/* <DocTitle2/> */}
+        <MyForm/>
       </div>
     );
   }
