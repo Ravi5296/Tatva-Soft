@@ -2,27 +2,31 @@ import React from 'react'
 import Typography from '@mui/material/Typography'
 import { Box, Button, Divider, List, ListItem, ListItemText, InputLabel, TextField } from '@mui/material'
 import { useFormik } from "formik";
-import { basicSchema } from '../../assets/Schema'
 import Theme from '../../assets/Theme'
 import Heading from '../../assets/components/Heading'
+import { toast } from 'react-toastify';
+import * as yup from "yup"
+import { useNavigate } from 'react-router-dom';
 
-
+const basicLoginSchema = yup.object({
+  emailLogin: yup.string().email("Invalid email address").required("Email is required"),
+  passwordLogin: yup.string().required("Password is required")
+});
 
 function Login() {
-
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      emailLogin: "",
+      passwordLogin: ""
     },
-    validationSchema: basicSchema,
-    onSUbmit: (values) => {
+    validationSchema: basicLoginSchema,
+    onSubmit: (values) => {
+      toast.success('Login Successfull')
       console.log(values);
     }
   })
+  
 
   return (
     <Box sx={{width:'80%', margin:'auto'}}>
@@ -47,7 +51,13 @@ function Login() {
               <ListItemText primary="&nbsp;view and track orders and more" />
             </ListItem>
           </List>
-          <Button variant='contained' sx={{ mt: '165px', width: '220px', height: '45px' }}>Create an Account</Button>
+          <Button 
+            variant='contained' 
+            sx={{ mt: '165px', width: '220px', height: '45px' }}
+            onClick={() => navigate('/register')}
+            >
+            Create an Account
+          </Button>
         </Box>
         <Box sx={{flex: '1'}}>
           <Typography variant="h2" color="secondary">New Customer</Typography>
@@ -59,11 +69,11 @@ function Login() {
             <Box sx={{mb:'40px'}}>
               <InputLabel htmlFor="email " sx={{ mb: '15px', color: Theme.palette.secondary.main }}>Email Address *</InputLabel>
               <TextField
-                id="email"
-                name="email"
+                id="emailLogin"
+                name="emailLogin"
                 type="email"
                 variant="outlined"
-                {...formik.getFieldProps("email")}
+                {...formik.getFieldProps("emailLogin")}
                 error={formik.touched.email && Boolean(formik.errors.email)}
                 helperText={formik.touched.email && formik.errors.email}
                 size='small'
@@ -74,11 +84,11 @@ function Login() {
             <Box sx={{mb:'60px'}}>
               <InputLabel htmlFor="password" sx={{ mb: '15px', color: Theme.palette.secondary.main }}>Password *</InputLabel>
               <TextField
-                id="password"
-                name="password"
+                id="passwordLogin"
+                name="passwordLogin"
                 type="password"
                 variant="outlined"
-                {...formik.getFieldProps("password")}
+                {...formik.getFieldProps("passwordLogin")}
                 error={formik.touched.password && Boolean(formik.errors.password)}
                 helperText={formik.touched.password && formik.errors.password}
                 size='small'

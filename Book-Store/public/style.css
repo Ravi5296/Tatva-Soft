@@ -1,0 +1,10 @@
+body{
+  margin: 0 ;
+  padding: 0 ;
+}
+
+.yup-helper-text {
+  position: absolute;
+  top: -10px;
+  left: 0;
+}

@@ -1,7 +1,8 @@
 import { Box } from '@mui/system'
 import React from 'react'
 import Typography from '@mui/material/Typography'
-import logo from '../TatvaSoftLogo.png'
+import logo from '../images/TatvaSoftLogo.png'
+
 
 
 function Footer() {

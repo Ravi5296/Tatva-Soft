@@ -5,6 +5,7 @@ import { TextField, Button, InputLabel } from "@mui/material"
 import { useFormik } from "formik";
 import { basicSchema } from '../../assets/Schema'
 import Heading from '../../assets/components/Heading';
+import { toast } from 'react-toastify';
 
 function Register() {
 
@@ -18,10 +19,10 @@ function Register() {
     },
     validationSchema: basicSchema,
     onSubmit: (values) => {
+      toast.success('successfully registered')
       console.log(values);
     }
   })
-
 
   return (
     <div>
@@ -69,9 +70,9 @@ function Register() {
                 helperText={formik.touched.lastName && formik.errors.lastName}
                 size='small'
               />
-            </Grid>
+            </Grid> 
 
-
+    
             <Grid item xs={12} sx={{ mt: '40px', mb: '70px' }}>
               <InputLabel htmlFor="email " sx={{ mb: '15px', color: Theme.palette.secondary.main }}>Email Address *</InputLabel>
               <TextField
