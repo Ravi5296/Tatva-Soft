@@ -2,9 +2,9 @@ import { TextField, Box, Button, TableContainer, Table, TableCell, TableHead, Ta
 import React from 'react'
 import Heading from '../../assets/components/Heading'
 import { columns, bookData } from './ProductData'
+import { useState } from 'react'
 
 function ProductPage() {
-
 
   return (
     <Box sx={{ width: '80%', m: 'auto' }} >
@@ -44,7 +44,7 @@ function ProductPage() {
                       type="button"
                       className="green-btn btn"
                       variant="outlined"
-                      color="primary"
+                      color="secondary1"
                       sx={{width:'80px', height:'30px'}}
                     >
                       Edit

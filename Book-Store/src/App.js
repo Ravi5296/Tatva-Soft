@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from "react-router-dom";
 import PageNavigation from './assets/PageNavigation';
 import ProductPage from './pages/Product Page/ProductPage';
+import Ex from './Ex';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Header />
           {/* <PageNavigation/> */}
           <ProductPage/>
+          <Ex/>
         <Footer />
         <ToastContainer />
       </BrowserRouter>
